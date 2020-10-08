@@ -5,7 +5,10 @@ Wants=network-online.target
 
 [Service]
 WorkingDirectory=
-ExecStart=BASE_URL=https://send.chevro.fr PORT=8562 NODE_ENV=production /usr/bin/npm run prod
+Environment=BASE_URL=https://send.chevro.fr
+Environment=PORT=8562
+Environment=NODE_ENV=production
+ExecStart=/usr/bin/npm run prod
 
 Restart=always
 
