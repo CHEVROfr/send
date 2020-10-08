@@ -109,3 +109,20 @@ The android implementation is contained in the `android` directory, and can be v
 [Mozilla Public License Version 2.0](LICENSE)
 
 ---
+
+
+# CHEVRO-SPECIFIC deployment instructions
+
+Systemctl service:
+
+    sed -i "s?^WorkingDirectory=.*?WorkingDirectory=$(pwd)?g" send.service
+
+    cp send.service /etc/systemd/system/send.service
+
+    sudo systemctl start send
+
+Caddy :
+    
+    cp send.caddy /etc/caddy/send.caddy
+
+    sudo systemctl restart caddy

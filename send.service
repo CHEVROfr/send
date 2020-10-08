@@ -1,0 +1,20 @@
+[Unit]
+Description=CHEVRO Send, forked from Firefox Send
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+WorkingDirectory=
+ExecStart=BASE_URL=https://send.chevro.fr PORT=8562 NODE_ENV=production /usr/bin/npm run prod
+
+Restart=always
+
+RestartSec=10
+
+StandardOutput=syslog
+StandardError=syslog
+
+SyslogIdentifier=chevro_send
+
+[Install]
+WantedBy=multi-user.target
