@@ -122,7 +122,7 @@ const conf = convict({
   },
   sentry_host: {
     format: String,
-    default: 'https://sentry.prod.mozaws.net',
+    default: '',
     env: 'SENTRY_HOST'
   },
   env: {
@@ -147,7 +147,7 @@ const conf = convict({
   },
   base_url: {
     format: 'url',
-    default: 'https://send.firefox.com',
+    default: 'https://send.chevro.fr',
     env: 'BASE_URL'
   },
   file_dir: {
@@ -157,7 +157,7 @@ const conf = convict({
   },
   fxa_required: {
     format: Boolean,
-    default: true,
+    default: false,
     env: 'FXA_REQUIRED'
   },
   fxa_url: {

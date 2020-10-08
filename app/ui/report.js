@@ -16,13 +16,6 @@ module.exports = function(state, emit) {
           <p class="text-xl text-center mb-4 leading-normal">
             ${state.translate('reportUnknownDescription')}
           </p>
-          <p class="text-center">
-            ${raw(
-              replaceLinks(state.translate('reportReasonCopyright'), [
-                'https://www.mozilla.org/about/legal/report-infringement/'
-              ])
-            )}
-          </p>
         </section>
       </main>
     `;
@@ -88,13 +81,6 @@ module.exports = function(state, emit) {
                       </li>
                     `
                 )}
-                <li class="mt-4 mb-2 leading-normal">
-                  ${raw(
-                    replaceLinks(state.translate('reportReasonCopyright'), [
-                      'https://www.mozilla.org/about/legal/report-infringement/'
-                    ])
-                  )}
-                </li>
               </ul>
             </fieldset>
             <input
